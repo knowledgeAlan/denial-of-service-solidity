@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1717489931684,
@@ -48,6 +48,10 @@
                 {
                     "date": 1717495175395,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n   },\n   networks:{\n     sepolia: {\n       url: \"https://sepolia.infura.io/v3/\"+process.env.ALCHEMY_API_KEY,\n-      accounts:[{process.env.SEPOLIA_PRIVATE_KEY}]\n+      accounts:[process.env.SEPOLIA_PRIVATE_KEY]\n     }\n   }\n };\n"
+                },
+                {
+                    "date": 1717495755058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     apiKey:process.env.ETHERSCAN_API_KEY,\n   },\n   networks:{\n     sepolia: {\n-      url: \"https://sepolia.infura.io/v3/\"+process.env.ALCHEMY_API_KEY,\n+      url: \"https://sepolia.infura.io/v3/\"+process.env.INFURA_API_KEY,\n       accounts:[process.env.SEPOLIA_PRIVATE_KEY]\n     }\n   }\n };\n"
                 }
             ],
             "date": 1717489931684,
