@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1717489931684,
@@ -16,6 +16,38 @@
                 {
                     "date": 1717490493605,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,12 @@\n module.exports = {\n   solidity: \"0.8.24\",\n   etherscan:{\n     apiKey:process.env.ETHERSCAN_API_KEY,\n+  },\n+  networks:{\n+    sepolia: {\n+      url: process.env.ALCHEMY_API_KEY,\n+      accounts:[process.env.SEPOLIA_PRIVATE_KEY]\n+    }\n   }\n };\n"
+                },
+                {
+                    "date": 1717492135608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     apiKey:process.env.ETHERSCAN_API_KEY,\n   },\n   networks:{\n     sepolia: {\n-      url: process.env.ALCHEMY_API_KEY,\n+      url: \"https://eth-sepolia.g.alchemy.com/v2/\"+process.env.ALCHEMY_API_KEY,\n       accounts:[process.env.SEPOLIA_PRIVATE_KEY]\n     }\n   }\n };\n"
+                },
+                {
+                    "date": 1717493396858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     apiKey:process.env.ETHERSCAN_API_KEY,\n   },\n   networks:{\n     sepolia: {\n-      url: \"https://eth-sepolia.g.alchemy.com/v2/\"+process.env.ALCHEMY_API_KEY,\n-      accounts:[process.env.SEPOLIA_PRIVATE_KEY]\n+      url: \"https://sepolia.infura.io/v3/a5a8f893c665463b9a8d8468616523b6\",\n+      accounts:[f514a7fba230a1a31e4f0a645825072dcb9ee46a4673906802a462dce67bf5e7]\n     }\n   }\n };\n"
+                },
+                {
+                    "date": 1717493413440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n /** @type import('hardhat/config').HardhatUserConfig */\n module.exports = {\n   solidity: \"0.8.24\",\n   etherscan:{\n-    apiKey:process.env.ETHERSCAN_API_KEY,\n+    apiKey:\"7JPUU12VSIADTA3UEMVTZWZG68NCVFDJQA\",\n   },\n   networks:{\n     sepolia: {\n       url: \"https://sepolia.infura.io/v3/a5a8f893c665463b9a8d8468616523b6\",\n-      accounts:[f514a7fba230a1a31e4f0a645825072dcb9ee46a4673906802a462dce67bf5e7]\n+      accounts:[\"f514a7fba230a1a31e4f0a645825072dcb9ee46a4673906802a462dce67bf5e7\"]\n     }\n   }\n };\n"
+                },
+                {
+                    "date": 1717495011762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     apiKey:\"7JPUU12VSIADTA3UEMVTZWZG68NCVFDJQA\",\n   },\n   networks:{\n     sepolia: {\n-      url: \"https://sepolia.infura.io/v3/a5a8f893c665463b9a8d8468616523b6\",\n+      url: \"https://sepolia.infura.io/v3/\"+{process.env.ALCHEMY_API_KEY},\n       accounts:[\"f514a7fba230a1a31e4f0a645825072dcb9ee46a4673906802a462dce67bf5e7\"]\n     }\n   }\n };\n"
+                },
+                {
+                    "date": 1717495036905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n   },\n   networks:{\n     sepolia: {\n       url: \"https://sepolia.infura.io/v3/\"+{process.env.ALCHEMY_API_KEY},\n-      accounts:[\"f514a7fba230a1a31e4f0a645825072dcb9ee46a4673906802a462dce67bf5e7\"]\n+      accounts:[{process.env.SEPOLIA_PRIVATE_KEY}]\n     }\n   }\n };\n"
+                },
+                {
+                    "date": 1717495065391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n /** @type import('hardhat/config').HardhatUserConfig */\n module.exports = {\n   solidity: \"0.8.24\",\n   etherscan:{\n-    apiKey:\"7JPUU12VSIADTA3UEMVTZWZG68NCVFDJQA\",\n+    apiKey:{process.env.ETHERSCAN_API_KEY},\n   },\n   networks:{\n     sepolia: {\n       url: \"https://sepolia.infura.io/v3/\"+{process.env.ALCHEMY_API_KEY},\n"
+                },
+                {
+                    "date": 1717495167694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n /** @type import('hardhat/config').HardhatUserConfig */\n module.exports = {\n   solidity: \"0.8.24\",\n   etherscan:{\n-    apiKey:{process.env.ETHERSCAN_API_KEY},\n+    apiKey:process.env.ETHERSCAN_API_KEY,\n   },\n   networks:{\n     sepolia: {\n-      url: \"https://sepolia.infura.io/v3/\"+{process.env.ALCHEMY_API_KEY},\n+      url: \"https://sepolia.infura.io/v3/\"+process.env.ALCHEMY_API_KEY,\n       accounts:[{process.env.SEPOLIA_PRIVATE_KEY}]\n     }\n   }\n };\n"
+                },
+                {
+                    "date": 1717495175395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n   },\n   networks:{\n     sepolia: {\n       url: \"https://sepolia.infura.io/v3/\"+process.env.ALCHEMY_API_KEY,\n-      accounts:[{process.env.SEPOLIA_PRIVATE_KEY}]\n+      accounts:[process.env.SEPOLIA_PRIVATE_KEY]\n     }\n   }\n };\n"
                 }
             ],
             "date": 1717489931684,
